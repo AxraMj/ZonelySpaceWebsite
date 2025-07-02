@@ -169,7 +169,7 @@ export default function Privacy() {
                 <li><strong>Opt-out:</strong> Opt out of any future communications from us</li>
               </ul>
               <p className="leading-relaxed">
-                To exercise any of these rights, please contact us at hello@zonelyspace.com. We will respond to your 
+                To exercise any of these rights, please contact us at support@zonely.space. We will respond to your 
                 request within 30 days.
               </p>
             </section>
@@ -180,7 +180,7 @@ export default function Privacy() {
                 Zonely Space does not knowingly collect personal information from children under 13 years of age. 
                 If we learn that we have collected personal information from a child under 13, we will delete that 
                 information immediately. If you believe we have collected information from a child under 13, please 
-                contact us immediately at hello@zonelyspace.com.
+                contact us immediately at support@zonely.space.
               </p>
             </section>
 
@@ -214,7 +214,7 @@ export default function Privacy() {
                 please contact us at:
               </p>
               <div className="bg-slate-50 rounded-lg p-4 mt-4">
-                <p className="text-slate-700 mb-2"><strong>Email:</strong> hello@zonelyspace.com</p>
+                <p className="text-slate-700 mb-2"><strong>Email:</strong> support@zonely.space</p>
                 <p className="text-slate-700"><strong>Subject Line:</strong> Privacy Policy Inquiry</p>
               </div>
               <p className="leading-relaxed mt-4">

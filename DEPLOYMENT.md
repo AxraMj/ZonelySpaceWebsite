@@ -59,7 +59,7 @@ If you need environment variables for production:
 
 - **Framework**: Vite
 - **Build Command**: `npm run build`
-- **Output Directory**: `dist/public`
+- **Output Directory**: `dist/client`
 - **Install Command**: `npm install`
 - **Dev Command**: `npm run dev`
 
@@ -68,14 +68,14 @@ If you need environment variables for production:
 ### Custom Domain Setup
 
 1. In Vercel Dashboard > Your Project > Settings > Domains
-2. Add your custom domain (e.g., `zonelyspace.com`)
+2. Add your custom domain (e.g., `zonely.space`)
 3. Configure DNS records as instructed by Vercel
 4. SSL certificates are automatically handled
 
 ### Recommended Domain Structure
-- Production: `zonelyspace.com`
-- Preview: `preview.zonelyspace.com`
-- Development: `dev.zonelyspace.com`
+- Production: `zonely.space`
+- Preview: `preview.zonely.space`
+- Development: `dev.zonely.space`
 
 ## Performance Optimization
 

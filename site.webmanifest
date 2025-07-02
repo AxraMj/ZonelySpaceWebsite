@@ -2,7 +2,7 @@
   "name": "Zonely Space",
   "short_name": "Zonely",
   "description": "1-minute mindful breathing for instant stress relief",
-  "start_url": "/",
+  "start_url": "https://zonely.space/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#38bdf8",

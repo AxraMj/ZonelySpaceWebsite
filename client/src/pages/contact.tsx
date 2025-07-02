@@ -90,7 +90,7 @@ export default function Contact() {
                       href="mailto:support@zonely.space"
                       className="text-sky-600 hover:text-sky-700 transition-colors"
                     >
-                      hello@zonelyspace.com
+                      support@zonely.space
                     </a>
                     <p className="text-slate-500 text-sm mt-1">
                       We typically respond within 24 hours
