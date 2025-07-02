@@ -7,9 +7,9 @@ import FooterLinks from "@/components/footer-links";
 
 const breathingStates = [
   { phase: 'inhale', text: 'breathe in', duration: 4000 },
-  { phase: 'hold', text: 'hold', duration: 4000 },
+  { phase: 'hold', text: 'hold at top', duration: 4000 },
   { phase: 'exhale', text: 'breathe out', duration: 4000 },
-  { phase: 'hold', text: 'hold', duration: 4000 }
+  { phase: 'hold2', text: 'hold at bottom', duration: 4000 }
 ];
 
 export default function Home() {

@@ -65,11 +65,11 @@ export default function BreathingCircle({ isActive, breathPhase, breathText, tim
       case 'inhale':
         return 'breathe in';
       case 'hold':
-        return 'hold';
+        return 'hold at top';
       case 'exhale':
         return 'breathe out';
       case 'hold2':
-        return 'hold';
+        return 'hold at bottom';
       default:
         return breathText;
     }
