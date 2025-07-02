@@ -100,7 +100,15 @@ Zonely Space is a minimalist web application designed to provide users with a 1-
 
 ```
 Changelog:
-- July 02, 2025. Initial setup
+- July 02, 2025: Initial setup with complete mindfulness app
+- July 02, 2025: Enhanced for Google AdSense compliance
+  - Removed affiliate footer links per user request
+  - Added comprehensive educational content about breathing science
+  - Enhanced SEO with detailed meta tags and structured data
+  - Added step-by-step usage instructions
+  - Improved accessibility with semantic HTML and ARIA labels
+  - Added benefits section with visual indicators
+  - Optimized content for high-value, original information
 ```
 
 ## User Preferences

@@ -107,17 +107,18 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center pt-8 pb-4 px-4"
+          role="banner"
         >
           <h1 className="text-3xl md:text-4xl font-light text-slate-700 mb-2">
             Zonely Space
           </h1>
           <p className="text-slate-500 text-sm md:text-base font-light">
-            One minute to inner peace
+            Your free 1-minute mindful breathing companion
           </p>
         </motion.header>
 
         {/* Main Content */}
-        <section className="flex-1 flex flex-col items-center justify-center px-4 py-8">
+        <section className="flex-1 flex flex-col items-center justify-center px-4 py-8" role="main" aria-label="Breathing exercise area">
           <BreathingCircle
             isActive={isActive}
             breathPhase={breathPhase}
@@ -165,15 +166,70 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="max-w-lg text-center mt-12 px-4"
+            className="max-w-2xl text-center mt-12 px-4"
           >
-            <h3 className="text-lg font-medium text-slate-700 mb-3">
-              The Science of Mindful Breathing
-            </h3>
-            <p className="text-slate-600 text-sm md:text-base leading-relaxed font-light">
-              Controlled breathing activates your parasympathetic nervous system, reducing cortisol levels and promoting mental clarity. 
-              This 4-4-4-4 breathing pattern helps regulate heart rate variability, creating an immediate sense of calm and improved focus.
-            </p>
+            <h2 className="text-xl md:text-2xl font-medium text-slate-700 mb-4">
+              The Science Behind 1-Minute Mindful Breathing
+            </h2>
+            <div className="space-y-4 text-slate-600 text-sm md:text-base leading-relaxed">
+              <p>
+                Controlled breathing activates your parasympathetic nervous system, the body's natural "rest and digest" response. 
+                This simple practice reduces cortisol levels, lowers blood pressure, and promotes mental clarity in just 60 seconds.
+              </p>
+              <p>
+                Our 4-4-4-4 breathing pattern (inhale 4 seconds, hold 4 seconds, exhale 4 seconds, hold 4 seconds) helps regulate 
+                heart rate variability, creating an immediate sense of calm and improved focus. Research shows that even brief 
+                mindfulness practices can reduce anxiety and enhance cognitive performance.
+              </p>
+            </div>
+            
+            <div className="mt-8 bg-white/30 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-lg font-medium text-slate-700 mb-3">
+                Benefits of Daily Practice
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-600">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                  <span>Reduced stress and anxiety</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                  <span>Improved concentration</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                  <span>Better emotional regulation</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                  <span>Enhanced sleep quality</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8 bg-slate-50/50 backdrop-blur-sm rounded-lg p-6 border border-slate-200/30">
+              <h3 className="text-lg font-medium text-slate-700 mb-3">
+                How to Use This Breathing Exercise
+              </h3>
+              <div className="space-y-3 text-sm text-slate-600">
+                <div className="flex items-start space-x-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-sky-400 text-white rounded-full flex items-center justify-center text-xs font-medium mt-0.5">1</div>
+                  <p>Find a comfortable position, either sitting or standing with your back straight.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-sky-400 text-white rounded-full flex items-center justify-center text-xs font-medium mt-0.5">2</div>
+                  <p>Click "Start 1-Minute Zen" and follow the visual breathing guide on screen.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-sky-400 text-white rounded-full flex items-center justify-center text-xs font-medium mt-0.5">3</div>
+                  <p>Breathe naturally along with the expanding and contracting circle animation.</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="flex-shrink-0 w-6 h-6 bg-sky-400 text-white rounded-full flex items-center justify-center text-xs font-medium mt-0.5">4</div>
+                  <p>Complete the full 60-second session for maximum stress relief benefits.</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </section>
 
