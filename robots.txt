@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zonely-space.vercel.app/sitemap.xml
+Sitemap: https://zonely.space/sitemap.xml
