@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import { Linkedin } from "lucide-react";
 
 export default function FooterLinks() {
   return (
@@ -14,9 +15,20 @@ export default function FooterLinks() {
           Privacy Policy
         </Link>
       </div>
-      <p className="text-slate-400 text-xs">
-        © 2025 Zonely. All rights reserved.
-      </p>
+      <div className="flex items-center justify-center space-x-2 text-slate-400">
+        <p className="text-xs">
+          © 2025 Zonely. All rights reserved.
+        </p>
+        <a 
+          href="https://www.linkedin.com/company/zonely.space/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-slate-600 transition-colors"
+          aria-label="Visit Zonely Space on LinkedIn"
+        >
+          <Linkedin size={16} />
+        </a>
+      </div>
     </motion.footer>
   );
 }
