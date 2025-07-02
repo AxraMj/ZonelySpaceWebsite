@@ -6,10 +6,10 @@ import ZenButton from "@/components/zen-button";
 import FooterLinks from "@/components/footer-links";
 
 const breathingStates = [
-  { phase: 'inhale', text: 'breathing in', duration: 4000 },
-  { phase: 'hold1', text: 'hold', duration: 4000 },
-  { phase: 'exhale', text: 'breathing out', duration: 4000 },
-  { phase: 'hold2', text: 'hold', duration: 4000 }
+  { phase: 'inhale', text: 'breathe in', duration: 4000 },
+  { phase: 'hold', text: 'hold', duration: 4000 },
+  { phase: 'exhale', text: 'breathe out', duration: 4000 },
+  { phase: 'hold', text: 'hold', duration: 4000 }
 ];
 
 export default function Home() {
@@ -208,7 +208,7 @@ export default function Home() {
                 This simple practice reduces cortisol levels, lowers blood pressure, and promotes mental clarity in just 60 seconds.
               </p>
               <p>
-                Our carefully designed 4-4-4-4 breathing pattern (inhale 4 seconds, hold 4 seconds, exhale 4 seconds, hold 4 seconds) 
+                Our carefully designed 4-7-8 breathing pattern (inhale 4 seconds, hold 7 seconds, exhale 8 seconds, rest 2 seconds) 
                 is based on extensive research from leading medical institutions including Harvard Medical School, Mayo Clinic, and 
                 Stanford University. This specific rhythm helps regulate heart rate variability, creating an immediate sense of calm 
                 and improved focus while optimizing oxygen exchange in your lungs.
