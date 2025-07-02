@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zonely-space.replit.app/sitemap.xml
