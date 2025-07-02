@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import BreathingCircle from "@/components/breathing-circle";
@@ -31,9 +31,6 @@ export default function Home() {
     setIsComplete(false);
     setBreathPhase('inhale');
     
-    // Start breathing cycle
-    cycleBreathingPhases();
-    
     // Start countdown timer
     timerRef.current = setInterval(() => {
       setTimeLeft((prev) => {
@@ -46,20 +43,19 @@ export default function Home() {
     }, 1000);
   };
 
-  const cycleBreathingPhases = () => {
+  const cycleBreathingPhases = useCallback(() => {
+    if (!isActive) return;
+    
     const currentState = breathingStates[currentPhaseIndex];
     setBreathPhase(currentState.phase);
     
     phaseTimerRef.current = setTimeout(() => {
-      setCurrentPhaseIndex((prev) => {
-        const next = (prev + 1) % breathingStates.length;
-        if (isActive) {
-          cycleBreathingPhases();
-        }
-        return next;
-      });
+      if (isActive) {
+        const nextIndex = (currentPhaseIndex + 1) % breathingStates.length;
+        setCurrentPhaseIndex(nextIndex);
+      }
     }, currentState.duration);
-  };
+  }, [currentPhaseIndex, isActive]);
 
   const endZenSession = () => {
     setIsActive(false);
@@ -82,6 +78,16 @@ export default function Home() {
     if (timerRef.current) clearInterval(timerRef.current);
     if (phaseTimerRef.current) clearTimeout(phaseTimerRef.current);
   };
+
+  // Trigger breathing cycle when phase index changes
+  useEffect(() => {
+    if (isActive) {
+      cycleBreathingPhases();
+    }
+    return () => {
+      if (phaseTimerRef.current) clearTimeout(phaseTimerRef.current);
+    };
+  }, [currentPhaseIndex, cycleBreathingPhases]);
 
   // Cleanup timers on unmount
   useEffect(() => {
@@ -147,12 +153,23 @@ export default function Home() {
                 initial={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
-                className="mb-8"
+                className="mb-8 flex flex-col items-center space-y-4"
               >
                 <ZenButton
                   isActive={isActive}
                   onClick={startZenSession}
                 />
+                {isActive && (
+                  <motion.button
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    onClick={resetZenSession}
+                    className="bg-slate-400 hover:bg-slate-500 text-white font-medium py-2 px-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ease-out transform hover:scale-105 active:scale-95 text-sm"
+                  >
+                    Restart
+                  </motion.button>
+                )}
               </motion.div>
             ) : (
               <motion.div
