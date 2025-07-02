@@ -6,10 +6,10 @@ import ZenButton from "@/components/zen-button";
 import FooterLinks from "@/components/footer-links";
 
 const breathingStates = [
-  { phase: 'inhale', text: 'Breathe in...', duration: 4000 },
-  { phase: 'hold1', text: 'Hold...', duration: 4000 },
-  { phase: 'exhale', text: 'Breathe out...', duration: 4000 },
-  { phase: 'hold2', text: 'Hold...', duration: 4000 }
+  { phase: 'inhale', text: 'breathing in', duration: 4000 },
+  { phase: 'hold1', text: 'hold', duration: 4000 },
+  { phase: 'exhale', text: 'breathing out', duration: 4000 },
+  { phase: 'hold2', text: 'hold', duration: 4000 }
 ];
 
 export default function Home() {
