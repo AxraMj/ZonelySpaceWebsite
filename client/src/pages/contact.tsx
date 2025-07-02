@@ -87,7 +87,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-medium text-slate-800 mb-2">Email Us</h3>
                     <a 
-                      href="mailto:hello@zonelyspace.com"
+                      href="mailto:support@zonely.space"
                       className="text-sky-600 hover:text-sky-700 transition-colors"
                     >
                       hello@zonelyspace.com
