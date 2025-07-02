@@ -1,0 +1,16 @@
+{
+  "name": "Zonely Space",
+  "short_name": "Zonely",
+  "description": "1-minute mindful breathing for instant stress relief",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#38bdf8",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
