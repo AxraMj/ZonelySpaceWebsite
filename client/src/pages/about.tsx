@@ -9,7 +9,7 @@ export default function About() {
         <nav className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 text-slate-700 hover:text-slate-900 transition-colors">
             <ArrowLeft size={20} />
-            <span className="font-medium">Back to Zonely Space</span>
+            <span className="font-medium">Back to Zonely Space </span>
           </Link>
           <div className="flex space-x-6">
             <Link href="/about" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">About</Link>
