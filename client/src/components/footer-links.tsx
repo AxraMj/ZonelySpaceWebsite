@@ -14,6 +14,9 @@ export default function FooterLinks() {
         <Link href="/privacy" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
           Privacy Policy
         </Link>
+        <Link href="/terms" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
+          Terms of Service
+        </Link>
       </div>
       <div className="flex items-center justify-center space-x-2 text-slate-400">
         <p className="text-xs">
