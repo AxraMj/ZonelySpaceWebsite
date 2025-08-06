@@ -189,7 +189,7 @@ export default function Contact() {
 
       <footer className="mt-16 py-8 px-4 text-center border-t border-slate-200/50">
         <div className="flex justify-center space-x-6 mb-4">
-          <Link href="/privacy" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
+          <Link href="/privacy-policy" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
             Privacy Policy
           </Link>
         </div>
