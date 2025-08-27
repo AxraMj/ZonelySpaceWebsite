@@ -17,7 +17,7 @@ export default function FooterLinks() {
         <Link href="/contact" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
           Contact
         </Link>
-        <Link href="/privacy-policy" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
+        <Link href="/Privacy-Policy" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
           Privacy Policy
         </Link>
         <Link href="/terms-and-conditions" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
