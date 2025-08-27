@@ -374,6 +374,31 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            
+            <div className="mt-8 bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-slate-200/30">
+              <h3 className="text-xl font-medium text-slate-700 mb-4">
+                Important Medical Disclaimer
+              </h3>
+              <div className="space-y-3 text-sm text-slate-600">
+                <p>
+                  <strong>This breathing exercise is for general wellness and stress management only.</strong> It is not intended 
+                  to diagnose, treat, cure, or prevent any disease or medical condition. Always consult with a qualified healthcare 
+                  professional before beginning any new wellness routine, especially if you have:
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Heart conditions, high blood pressure, or cardiovascular disease</li>
+                  <li>Respiratory conditions like asthma, COPD, or other breathing disorders</li>
+                  <li>Anxiety disorders, panic disorder, or other mental health conditions</li>
+                  <li>Any medical condition that affects breathing or heart rate</li>
+                  <li>If you are pregnant or nursing</li>
+                </ul>
+                <p>
+                  If you experience dizziness, chest pain, difficulty breathing, or any uncomfortable symptoms during the exercise, 
+                  stop immediately and consult a healthcare provider. This tool is meant to complement, not replace, professional 
+                  medical care and treatment.
+                </p>
+              </div>
+            </div>
           </motion.div>
         </section>
 
