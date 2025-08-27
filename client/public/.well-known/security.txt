@@ -1,0 +1,6 @@
+Contact: mailto:support@zonely.space
+Expires: 2025-12-31T23:59:59.000Z
+Acknowledgments: https://zonely.space/contact
+Preferred-Languages: en
+Canonical: https://zonely.space/.well-known/security.txt
+Policy: https://zonely.space/security-policy
