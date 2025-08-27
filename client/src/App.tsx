@@ -64,6 +64,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <CookieConsent />
         </TooltipProvider>
       </QueryClientProvider>
     </ErrorBoundary>
