@@ -19,19 +19,19 @@ export default function Home() {
   const [breathPhase, setBreathPhase] = useState('ready');
   const [currentPhaseIndex, setCurrentPhaseIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
-  
+
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const phaseTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const startZenSession = () => {
     if (isActive) return;
-    
+
     setIsActive(true);
     setTimeLeft(60);
     setCurrentPhaseIndex(0);
     setIsComplete(false);
     setBreathPhase('inhale');
-    
+
     // Start countdown timer
     timerRef.current = setInterval(() => {
       setTimeLeft((prev) => {
@@ -46,10 +46,10 @@ export default function Home() {
 
   const cycleBreathingPhases = useCallback(() => {
     if (!isActive) return;
-    
+
     const currentState = breathingStates[currentPhaseIndex];
     setBreathPhase(currentState.phase);
-    
+
     phaseTimerRef.current = setTimeout(() => {
       if (isActive) {
         const nextIndex = (currentPhaseIndex + 1) % breathingStates.length;
@@ -62,7 +62,7 @@ export default function Home() {
     setIsActive(false);
     setIsComplete(true);
     setBreathPhase('complete');
-    
+
     // Clear timers
     if (timerRef.current) clearInterval(timerRef.current);
     if (phaseTimerRef.current) clearTimeout(phaseTimerRef.current);
@@ -74,7 +74,7 @@ export default function Home() {
     setCurrentPhaseIndex(0);
     setIsComplete(false);
     setBreathPhase('ready');
-    
+
     // Clear timers
     if (timerRef.current) clearInterval(timerRef.current);
     if (phaseTimerRef.current) clearTimeout(phaseTimerRef.current);
@@ -101,7 +101,7 @@ export default function Home() {
   const getCurrentBreathText = () => {
     if (breathPhase === 'ready') return 'Ready to breathe?';
     if (breathPhase === 'complete') return 'Complete!';
-    
+
     const currentState = breathingStates.find(state => state.phase === breathPhase);
     return currentState?.text || 'Breathe...';
   };
@@ -215,7 +215,7 @@ export default function Home() {
                 to a calm, balanced state.
               </p>
             </div>
-            
+
             <div className="mt-8 bg-white/30 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <h3 className="text-lg font-medium text-slate-700 mb-3">
                 Benefits of Daily Practice
@@ -252,7 +252,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="mt-8 bg-slate-50/50 backdrop-blur-sm rounded-lg p-6 border border-slate-200/30">
               <h3 className="text-lg font-medium text-slate-700 mb-3">
                 How to Use This Breathing Exercise
@@ -281,7 +281,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
+
             {/* Additional Comprehensive Content */}
             <div className="mt-12 grid md:grid-cols-2 gap-8">
               <div className="bg-white/40 backdrop-blur-sm rounded-lg p-6 border border-white/30">
@@ -297,7 +297,7 @@ export default function Home() {
                   <p><strong>Anyone with Anxiety:</strong> Develop a practical tool for managing panic attacks and general anxiety symptoms.</p>
                 </div>
               </div>
-              
+
               <div className="bg-white/40 backdrop-blur-sm rounded-lg p-6 border border-white/30">
                 <h3 className="text-xl font-medium text-slate-700 mb-4">
                   When to Use This Exercise
@@ -392,7 +392,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            
+
             <div className="mt-8 bg-white/60 backdrop-blur-sm rounded-lg p-6 border border-slate-200/30">
               <h3 className="text-xl font-medium text-slate-700 mb-4">
                 Important Medical Disclaimer
