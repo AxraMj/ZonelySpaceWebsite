@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import HeaderNav from "@/components/header-nav";
+import { blogPosts } from "@/data/blog-articles";
 
-const blogPosts = [
+const categories = ["All", "Science", "Workplace", "Sleep", "Family", "Fitness", "Technology", "Lifestyle", "Mental Health", "Practice"];
+
+const displayPosts = [
   {
     id: 1,
     title: "The Science of Stress: Why Your Body Needs Breathing Breaks",
@@ -96,8 +99,6 @@ const blogPosts = [
   }
 ];
 
-const categories = ["All", "Science", "Workplace", "Sleep", "Family", "Fitness", "Technology", "Lifestyle", "Mental Health", "Practice"];
-
 export default function Blog() {
   return (
     <div className="font-sans gradient-bg min-h-screen">
@@ -181,7 +182,7 @@ export default function Blog() {
 
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index) => (
+            {displayPosts.map((post, index) => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}

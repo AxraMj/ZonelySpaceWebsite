@@ -13,6 +13,8 @@ import AboutTechnique from "@/pages/about-technique";
 import Benefits from "@/pages/benefits";
 import PracticeGuide from "@/pages/practice-guide";
 import Blog from "@/pages/blog";
+import BlogArticle from "@/pages/blog-article";
+import Disclaimer from "@/pages/disclaimer";
 import NotFound from "@/pages/not-found";
 import { Component, ErrorInfo, ReactNode } from "react";
 
@@ -60,6 +62,8 @@ function Router() {
       <Route path="/benefits" component={Benefits} />
       <Route path="/practice-guide" component={PracticeGuide} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogArticle} />
+      <Route path="/disclaimer" component={Disclaimer} />
       <Route component={NotFound} />
     </Switch>
   );
