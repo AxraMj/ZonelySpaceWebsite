@@ -195,7 +195,7 @@ export default function Home() {
                 This simple practice reduces cortisol levels, lowers blood pressure, and promotes mental clarity in just 60 seconds.
               </p>
               <p>
-                Our carefully designed 4-7-8 breathing pattern (inhale 4 seconds, hold 7 seconds, exhale 8 seconds, rest 2 seconds) 
+                Our carefully designed 4-4-4-4 breathing pattern (inhale 4 seconds, hold 4 seconds, exhale 4 seconds, hold 4 seconds) 
                 is based on extensive research from leading medical institutions including Harvard Medical School, Mayo Clinic, and 
                 Stanford University. This specific rhythm helps regulate heart rate variability, creating an immediate sense of calm 
                 and improved focus while optimizing oxygen exchange in your lungs.
@@ -237,6 +237,19 @@ export default function Home() {
                   <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
                   <span>Enhanced sleep quality</span>
                 </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                  <span>Lower blood pressure</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-sky-400 rounded-full"></div>
+                  <span>Enhanced immune function</span>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <Link href="/benefits" className="text-sky-600 hover:text-sky-700 font-medium text-sm underline">
+                  Learn more about the benefits →
+                </Link>
               </div>
             </div>
             
@@ -261,6 +274,11 @@ export default function Home() {
                   <div className="flex-shrink-0 w-6 h-6 bg-sky-400 text-white rounded-full flex items-center justify-center text-xs font-medium mt-0.5">4</div>
                   <p>Complete the full 60-second session for maximum stress relief benefits.</p>
                 </div>
+              </div>
+              <div className="mt-4 text-center">
+                <Link href="/practice-guide" className="text-sky-600 hover:text-sky-700 font-medium text-sm underline">
+                  Complete practice guide and tips →
+                </Link>
               </div>
             </div>
             

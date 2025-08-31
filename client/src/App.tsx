@@ -9,6 +9,10 @@ import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
+import AboutTechnique from "@/pages/about-technique";
+import Benefits from "@/pages/benefits";
+import PracticeGuide from "@/pages/practice-guide";
+import Blog from "@/pages/blog";
 import NotFound from "@/pages/not-found";
 import { Component, ErrorInfo, ReactNode } from "react";
 
@@ -52,6 +56,10 @@ function Router() {
       <Route path="/contact" component={Contact} />
       <Route path="/Privacy-Policy" component={Privacy} />
       <Route path="/terms-and-conditions" component={Terms} />
+      <Route path="/about-technique" component={AboutTechnique} />
+      <Route path="/benefits" component={Benefits} />
+      <Route path="/practice-guide" component={PracticeGuide} />
+      <Route path="/blog" component={Blog} />
       <Route component={NotFound} />
     </Switch>
   );

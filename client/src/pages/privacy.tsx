@@ -157,6 +157,61 @@ export default function Privacy() {
             </section>
 
             <section>
+              <h2 className="text-2xl font-medium text-slate-800 mb-4">Google AdSense and Advertising</h2>
+              <p className="leading-relaxed mb-4">
+                Zonely Space may display advertisements served by Google AdSense. When you visit our website, 
+                Google may use cookies and other tracking technologies to:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 mb-4">
+                <li>Display personalized advertisements based on your interests</li>
+                <li>Measure advertising effectiveness and performance</li>
+                <li>Prevent the same ads from being shown repeatedly</li>
+                <li>Detect and prevent click fraud</li>
+              </ul>
+              
+              <h3 className="text-lg font-medium text-slate-700 mb-3 mt-6">Google's Use of Information</h3>
+              <p className="leading-relaxed mb-4">
+                Google AdSense may collect and use information including:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 mb-4">
+                <li>IP address and geographic location</li>
+                <li>Browser type and device information</li>
+                <li>Pages visited on our website</li>
+                <li>Previous visits to other websites (for interest-based advertising)</li>
+                <li>Demographic information (age, gender, interests)</li>
+              </ul>
+              
+              <h3 className="text-lg font-medium text-slate-700 mb-3 mt-6">Opting Out of Personalized Advertising</h3>
+              <p className="leading-relaxed mb-4">
+                You have control over how Google uses your information for advertising purposes:
+              </p>
+              <div className="bg-blue-50 rounded-lg p-4 mb-4">
+                <h4 className="font-medium text-slate-700 mb-2">How to Opt Out:</h4>
+                <ul className="list-disc pl-6 space-y-2 text-sm text-slate-600">
+                  <li><strong>Google Ads Settings:</strong> Visit <a href="https://www.google.com/settings/ads" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">www.google.com/settings/ads</a> to control personalized ads</li>
+                  <li><strong>Ad Choices:</strong> Use the Digital Advertising Alliance's opt-out tool at <a href="https://optout.aboutads.info" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">optout.aboutads.info</a></li>
+                  <li><strong>Browser Settings:</strong> Disable third-party cookies in your browser settings</li>
+                  <li><strong>Google Analytics:</strong> Opt out using the Google Analytics Opt-out Browser Add-on</li>
+                </ul>
+              </div>
+              
+              <p className="leading-relaxed mb-4">
+                <strong>Note:</strong> Opting out of personalized advertising does not mean you will see fewer ads, 
+                but the ads you see will be less relevant to your interests.
+              </p>
+              
+              <h3 className="text-lg font-medium text-slate-700 mb-3 mt-6">Third-Party Privacy Policies</h3>
+              <p className="leading-relaxed mb-4">
+                Our Privacy Policy does not apply to other advertisers or websites. We recommend reviewing 
+                the privacy policies of third-party ad servers for more detailed information:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 mb-4">
+                <li><strong>Google Privacy Policy:</strong> <a href="https://policies.google.com/privacy" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a></li>
+                <li><strong>Google AdSense Privacy:</strong> <a href="https://policies.google.com/technologies/ads" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">policies.google.com/technologies/ads</a></li>
+              </ul>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-medium text-slate-800 mb-4">Your Rights</h2>
               <p className="leading-relaxed mb-4">
                 You have the following rights regarding your personal information:
@@ -167,6 +222,7 @@ export default function Privacy() {
                 <li><strong>Deletion:</strong> Request deletion of your personal information</li>
                 <li><strong>Portability:</strong> Request a copy of your personal information in a portable format</li>
                 <li><strong>Opt-out:</strong> Opt out of any future communications from us</li>
+                <li><strong>Advertising Opt-out:</strong> Opt out of personalized advertising (see Google AdSense section above)</li>
               </ul>
               <p className="leading-relaxed">
                 To exercise any of these rights, please contact us at support@zonely.space. We will respond to your 

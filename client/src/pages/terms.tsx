@@ -1,22 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
+import HeaderNav from "@/components/header-nav";
 
 export default function Terms() {
   return (
     <div className="font-sans gradient-bg min-h-screen">
-      <header className="sticky top-0 bg-white/80 backdrop-blur-sm border-b border-slate-200/50 z-50">
-        <nav className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2 text-slate-700 hover:text-slate-900 transition-colors">
-            <ArrowLeft size={20} />
-            <span className="font-medium">Back to Zonely Space</span>
-          </Link>
-          <div className="flex space-x-6">
-            <Link href="/about" className="text-slate-600 hover:text-slate-900 transition-colors">About</Link>
-            <Link href="/contact" className="text-slate-600 hover:text-slate-900 transition-colors">Contact</Link>
-          </div>
-        </nav>
-      </header>
+      <HeaderNav />
 
       <main className="max-w-4xl mx-auto px-4 py-12">
         <motion.article
