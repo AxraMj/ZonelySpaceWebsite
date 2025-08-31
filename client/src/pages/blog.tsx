@@ -227,36 +227,7 @@ export default function Blog() {
             ))}
           </div>
 
-          {/* Newsletter Signup */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-16 bg-gradient-to-r from-emerald-400 to-sky-400 rounded-xl p-8 text-center text-white"
-          >
-            <h3 className="text-2xl font-light mb-4">Stay Updated with New Articles</h3>
-            <p className="text-emerald-50 mb-6 max-w-2xl mx-auto">
-              Get weekly insights on mindfulness, breathing techniques, and stress management 
-              delivered to your inbox. Plus exclusive access to guided breathing sessions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white"
-                data-testid="input-newsletter-email"
-              />
-              <button
-                className="bg-white text-emerald-600 font-medium py-3 px-6 rounded-lg hover:bg-emerald-50 transition-colors"
-                data-testid="button-newsletter-subscribe"
-              >
-                Subscribe
-              </button>
-            </div>
-            <p className="text-xs text-emerald-100 mt-3">
-              No spam, unsubscribe at any time. Read our <Link href="/Privacy-Policy" className="underline">Privacy Policy</Link>.
-            </p>
-          </motion.div>
+          
         </motion.div>
       </main>
 
