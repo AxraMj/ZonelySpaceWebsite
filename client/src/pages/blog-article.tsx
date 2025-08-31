@@ -78,13 +78,38 @@ export default function BlogArticle() {
               {/* Share Buttons */}
               <div className="flex items-center space-x-3">
                 <span className="text-sm text-slate-600 mr-2">Share:</span>
-                <button className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" data-testid="button-share-facebook">
+                <button 
+                  onClick={() => {
+                    const url = encodeURIComponent(window.location.href);
+                    const text = encodeURIComponent(article.title);
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
+                  }}
+                  className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" 
+                  data-testid="button-share-facebook"
+                >
                   <Facebook className="w-4 h-4" />
                 </button>
-                <button className="p-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-colors" data-testid="button-share-twitter">
+                <button 
+                  onClick={() => {
+                    const url = encodeURIComponent(window.location.href);
+                    const text = encodeURIComponent(`${article.title} - ${article.excerpt}`);
+                    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
+                  }}
+                  className="p-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-colors" 
+                  data-testid="button-share-twitter"
+                >
                   <Twitter className="w-4 h-4" />
                 </button>
-                <button className="p-2 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-colors" data-testid="button-share-linkedin">
+                <button 
+                  onClick={() => {
+                    const url = encodeURIComponent(window.location.href);
+                    const title = encodeURIComponent(article.title);
+                    const summary = encodeURIComponent(article.excerpt);
+                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`, '_blank', 'width=600,height=400');
+                  }}
+                  className="p-2 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-colors" 
+                  data-testid="button-share-linkedin"
+                >
                   <Linkedin className="w-4 h-4" />
                 </button>
               </div>
