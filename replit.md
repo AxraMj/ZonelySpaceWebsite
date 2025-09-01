@@ -99,16 +99,18 @@ Zonely Space is a minimalist web application designed to provide users with a 1-
 - **Database**: Environment variable-based PostgreSQL connection
 - **Static Assets**: Served through Vite development middleware
 
-### Production Build
-- **Frontend**: Vite builds optimized bundle to `dist/public`
-- **Backend**: esbuild creates single bundle in `dist/` directory
-- **Static Serving**: Express serves built frontend assets
-- **Database**: Production PostgreSQL via DATABASE_URL environment variable
+### Production Deployment
+- **Platform**: Vercel (deployed at zonely.space and www.zonely.space)
+- **Frontend**: Vite builds optimized bundle automatically via Vercel
+- **Automatic Deployment**: Every push to main branch auto-deploys to Vercel
+- **Global CDN**: Optimized for worldwide performance
+- **Custom Domain**: zonely.space configured and active
 
 ### Environment Configuration
-- **Database**: Requires `DATABASE_URL` environment variable
-- **Session Storage**: PostgreSQL-backed session store
-- **Build Process**: Separate frontend and backend build steps
+- **Deployment**: Vercel handles automatic builds and deployments
+- **Build Command**: `npm run build:client` (configured in Vercel)
+- **Output Directory**: Automatically detected by Vercel
+- **Domain**: Custom domain zonely.space active with SSL
 
 ## Changelog
 
@@ -156,6 +158,12 @@ Changelog:
   - Updated SEO metadata and sitemap for all new pages
   - Enhanced Contact page with FAQ section and detailed support information
   - Created multi-page resource hub structure for better AdSense approval odds
+- September 01, 2025: Successfully migrated to Replit and deployed to Vercel
+  - Migrated project from Replit Agent to Replit development environment
+  - Fixed build and deployment configuration issues
+  - Successfully deployed to Vercel at zonely.space and www.zonely.space
+  - Configured automatic deployments from GitHub main branch to Vercel
+  - Established Vercel as primary production deployment platform
 ```
 
 ## User Preferences
