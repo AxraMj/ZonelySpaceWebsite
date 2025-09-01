@@ -37,6 +37,11 @@ jobs:
     - name: Build application
       run: npm run build:client
 
+    - name: Copy built files to expected location
+      run: |
+        mkdir -p dist
+        cp -r client/dist/client dist/
+
     - name: Setup Pages
       uses: actions/configure-pages@v4
 
