@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import HeaderNav from "@/components/header-nav";
 
-export default function PrivacyPolicy() {
+function PrivacyPolicy() {
   return (
     <div className="font-sans gradient-bg min-h-screen">
       <HeaderNav />
@@ -193,3 +193,5 @@ export default function PrivacyPolicy() {
     </div>
   );
 }
+
+export default PrivacyPolicy;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import HeaderNav from "@/components/header-nav";
 
-export default function Disclaimer() {
+function Disclaimer() {
   return (
     <div className="font-sans gradient-bg min-h-screen">
       <HeaderNav />
@@ -179,3 +179,5 @@ export default function Disclaimer() {
     </div>
   );
 }
+
+export default Disclaimer;
