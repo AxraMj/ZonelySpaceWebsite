@@ -1,25 +1,15 @@
 
-name: Deploy to GitHub Pages
+name: Build and Test for Vercel
 
 on:
   push:
     branches: [ main ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build-and-deploy:
+  build-and-test:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
     - name: Checkout
@@ -37,19 +27,8 @@ jobs:
     - name: Build application
       run: npm run build:client
 
-    - name: Copy built files to expected location
-      run: |
-        mkdir -p dist
-        cp -r client/dist/client dist/
+    - name: Run tests (if available)
+      run: npm run test --if-present
 
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./dist/client
-
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+    - name: Build success notification
+      run: echo "✅ Build completed successfully! Vercel will auto-deploy from main branch."
