@@ -121,11 +121,11 @@ export default function Blog() {
           </header>
 
           {/* Categories Filter */}
-          <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 md:mb-12 px-2">
             {categories.map((category) => (
               <button
                 key={category}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${ 
+                className={`px-3 md:px-4 py-2 rounded-full text-xs md:text-sm font-medium transition-colors ${ 
                   category === "All" 
                     ? "bg-emerald-500 text-white" 
                     : "bg-white/60 text-slate-600 hover:bg-white/80"
@@ -138,26 +138,26 @@ export default function Blog() {
           </div>
 
           {/* Featured Post */}
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16">
             <motion.article
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-gradient-to-r from-emerald-50 to-sky-50 rounded-xl p-8 border border-white/30"
+              className="bg-gradient-to-r from-emerald-50 to-sky-50 rounded-xl p-4 md:p-8 border border-white/30"
             >
               <div className="flex items-center mb-4">
                 <span className="bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">FEATURED</span>
                 <span className="ml-3 text-emerald-600 text-sm font-medium">Science</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-light text-slate-800 mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-slate-800 mb-4 leading-tight">
                 The Science of Stress: Why Your Body Needs Breathing Breaks
               </h2>
-              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 mb-6 leading-relaxed">
                 Discover how chronic stress rewires your brain and why controlled breathing is your most 
                 powerful tool for restoration and resilience. New research reveals the surprising ways 
                 that just one minute of focused breathing can reverse stress-related cellular damage.
               </p>
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="flex items-center space-x-4 text-sm text-slate-500">
                   <div className="flex items-center">
                     <Calendar className="w-4 h-4 mr-1" />
@@ -181,7 +181,7 @@ export default function Blog() {
           </div>
 
           {/* Blog Posts Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {displayPosts.map((post, index) => (
               <motion.article
                 key={post.id}

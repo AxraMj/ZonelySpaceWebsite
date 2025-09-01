@@ -10,21 +10,21 @@ export default function FooterLinks() {
       transition={{ duration: 0.6, delay: 0.6 }}
       className="py-8 px-4 text-center border-t border-slate-200/50"
     >
-      <nav className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 mb-4">
-        <Link href="/about" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
+      <nav className="flex flex-wrap justify-center items-center gap-3 md:gap-6 mb-4">
+        <Link href="/about" className="text-slate-500 hover:text-slate-700 text-xs md:text-sm transition-colors">
           About
         </Link>
-        <Link href="/contact" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
+        <Link href="/contact" className="text-slate-500 hover:text-slate-700 text-xs md:text-sm transition-colors">
           Contact
         </Link>
-        <Link href="/Privacy-Policy" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
+        <Link href="/Privacy-Policy" className="text-slate-500 hover:text-slate-700 text-xs md:text-sm transition-colors">
           Privacy Policy
         </Link>
-        <Link href="/terms-and-conditions" className="text-slate-500 hover:text-slate-700 text-sm transition-colors">
+        <Link href="/terms-and-conditions" className="text-slate-500 hover:text-slate-700 text-xs md:text-sm transition-colors">
           Terms of Service
         </Link>
       </nav>
-      <div className="flex items-center justify-center space-x-2 text-slate-400">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-slate-400">
         <p className="text-xs">
           © 2025 Zonely. All rights reserved.
         </p>

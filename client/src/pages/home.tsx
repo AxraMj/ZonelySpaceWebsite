@@ -116,10 +116,10 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center pt-8 pb-4 px-4"
+          className="text-center pt-4 md:pt-8 pb-4 px-4"
           role="banner"
         >
-          <h2 className="text-3xl md:text-4xl font-light text-slate-700 mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-slate-700 mb-2 leading-tight">
             Your free 1-minute mindful breathing companion
           </h2>
         </motion.header>
@@ -184,12 +184,12 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="max-w-4xl text-center mt-12 px-4"
+            className="max-w-4xl text-center mt-8 md:mt-12 px-4"
           >
-            <h2 className="text-2xl md:text-3xl font-medium text-slate-700 mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-slate-700 mb-4 md:mb-6">
               The Science Behind 1-Minute Mindful Breathing
             </h2>
-            <div className="space-y-6 text-slate-600 text-sm md:text-base leading-relaxed">
+            <div className="space-y-4 md:space-y-6 text-slate-600 text-sm md:text-base leading-relaxed">
               <p className="text-lg">
                 Controlled breathing activates your parasympathetic nervous system, the body's natural "rest and digest" response. 
                 This simple practice reduces cortisol levels, lowers blood pressure, and promotes mental clarity in just 60 seconds.

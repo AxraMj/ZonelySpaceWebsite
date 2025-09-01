@@ -55,11 +55,11 @@ export default function BlogArticle() {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-light text-slate-800 mb-6 leading-tight" data-testid="article-title">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-slate-800 mb-6 leading-tight" data-testid="article-title">
               {article.title}
             </h1>
             
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
               <div className="flex items-center space-x-6 text-sm text-slate-600">
                 <div className="flex items-center">
                   <Calendar className="w-4 h-4 mr-2" />
@@ -76,8 +76,8 @@ export default function BlogArticle() {
               </div>
               
               {/* Share Buttons */}
-              <div className="flex items-center space-x-3">
-                <span className="text-sm text-slate-600 mr-2">Share:</span>
+              <div className="flex items-center space-x-2 md:space-x-3">
+                <span className="text-xs md:text-sm text-slate-600 mr-1 md:mr-2">Share:</span>
                 <button 
                   onClick={() => {
                     const url = encodeURIComponent(window.location.href);
@@ -121,7 +121,7 @@ export default function BlogArticle() {
           </header>
 
           {/* Article Content */}
-          <article className="prose prose-lg max-w-none text-slate-700">
+          <article className="prose prose-sm md:prose-lg max-w-none text-slate-700">
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
           </article>
 

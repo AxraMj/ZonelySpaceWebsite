@@ -15,18 +15,18 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <header className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-light text-slate-800 mb-4">
-              Get in Touch
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-slate-800 mb-4" data-testid="page-title">
+              Contact Us
             </h1>
-            <p className="text-xl text-slate-600 font-light">
-              We'd love to hear from you and support your wellness journey
+            <p className="text-lg md:text-xl text-slate-600 font-light">
+              We'd love to hear from you. Get in touch with our team.
             </p>
           </header>
 
           <div className="grid md:grid-cols-2 gap-12">
             <section>
               <h2 className="text-2xl font-medium text-slate-800 mb-6">How We Can Help</h2>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center">
@@ -71,7 +71,7 @@ export default function Contact() {
 
             <section>
               <h2 className="text-2xl font-medium text-slate-800 mb-6">Contact Information</h2>
-              
+
               <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 border border-slate-200/30">
                 <div className="space-y-4">
                   <div>
@@ -136,7 +136,7 @@ export default function Contact() {
 
           <section className="mt-12">
             <h2 className="text-2xl font-medium text-slate-800 mb-6 text-center">Frequently Asked Questions</h2>
-            
+
             <div className="space-y-6">
               <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 border border-slate-200/30">
                 <h3 className="font-medium text-slate-800 mb-2">Is Zonely Space really free?</h3>
