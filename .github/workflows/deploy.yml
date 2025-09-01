@@ -1,34 +1,39 @@
-
-name: Build and Test for Vercel
+name: Deploy to Vercel
 
 on:
   push:
-    branches: [ main ]
+    branches: [main, master]
   pull_request:
-    branches: [ main ]
+    branches: [main, master]
 
 jobs:
-  build-and-test:
+  deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: npm run build:client
+        env:
+          NODE_ENV: production
+          
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
-
-    - name: Install dependencies
-      run: npm ci
-
-    - name: Build application
-      run: npm run build:client
-
-    - name: Run tests (if available)
-      run: npm run test --if-present
-
-    - name: Build success notification
-      run: echo "✅ Build completed successfully! Vercel will auto-deploy from main branch."
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+          
+      - name: Deploy to Vercel (Production)
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
