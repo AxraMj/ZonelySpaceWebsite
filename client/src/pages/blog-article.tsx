@@ -1,15 +1,52 @@
 import { motion } from "framer-motion";
 import { Link, useRoute } from "wouter";
-import { ArrowLeft, Calendar, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Share2, Twitter, Facebook, Linkedin, Copy, Check } from "lucide-react";
 import HeaderNav from "@/components/header-nav";
 import { blogArticles } from "@/data/blog-articles";
+import { useState, useEffect, useRef } from 'react';
 
 export default function BlogArticle() {
   const [match, params] = useRoute("/blog/:slug");
   const slug = params?.slug;
-  
+
   const article = blogArticles.find(a => a.slug === slug);
-  
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const shareMenuRef = useRef<HTMLDivElement>(null);
+
+  // Close share menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (shareMenuRef.current && !shareMenuRef.current.contains(event.target as Node)) {
+        setShowShareMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const currentUrl = window.location.href;
+  const articleTitle = article?.title || '';
+  const articleDescription = article?.excerpt || '';
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(currentUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  const shareLinks = {
+    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(articleTitle)}&url=${encodeURIComponent(currentUrl)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
+  };
+
+
   if (!article) {
     return (
       <div className="font-sans gradient-bg min-h-screen">
@@ -35,17 +72,73 @@ export default function BlogArticle() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <Link 
-              href="/blog" 
-              className="text-slate-600 hover:text-slate-900 transition-colors flex items-center"
-              data-testid="link-back-to-blog"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Link>
-          </nav>
+          {/* Breadcrumb and Share Button */}
+          <div className="flex items-center justify-between mb-8">
+              <Link 
+                href="/blog" 
+                className="text-sky-600 hover:text-sky-700 font-medium inline-flex items-center transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Blog
+              </Link>
+
+              <div className="relative" ref={shareMenuRef}>
+                <button 
+                  onClick={() => setShowShareMenu(!showShareMenu)}
+                  className="text-slate-500 hover:text-slate-700 p-2 rounded-lg hover:bg-slate-100 transition-all"
+                >
+                  <Share2 className="w-5 h-5" />
+                </button>
+
+                {showShareMenu && (
+                  <div className="absolute right-0 top-12 bg-white rounded-lg shadow-lg border border-slate-200 p-4 min-w-[200px] z-50">
+                    <h4 className="font-medium text-slate-700 mb-3">Share this article</h4>
+                    <div className="space-y-2">
+                      <a
+                        href={shareLinks.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 p-2 rounded hover:bg-slate-50 transition-colors"
+                      >
+                        <Twitter className="w-4 h-4 text-blue-500" />
+                        <span className="text-sm text-slate-600">Share on Twitter</span>
+                      </a>
+                      <a
+                        href={shareLinks.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 p-2 rounded hover:bg-slate-50 transition-colors"
+                      >
+                        <Facebook className="w-4 h-4 text-blue-600" />
+                        <span className="text-sm text-slate-600">Share on Facebook</span>
+                      </a>
+                      <a
+                        href={shareLinks.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 p-2 rounded hover:bg-slate-50 transition-colors"
+                      >
+                        <Linkedin className="w-4 h-4 text-blue-700" />
+                        <span className="text-sm text-slate-600">Share on LinkedIn</span>
+                      </a>
+                      <button
+                        onClick={handleCopyLink}
+                        className="flex items-center space-x-3 p-2 rounded hover:bg-slate-50 transition-colors w-full text-left"
+                      >
+                        {copied ? (
+                          <Check className="w-4 h-4 text-green-500" />
+                        ) : (
+                          <Copy className="w-4 h-4 text-slate-500" />
+                        )}
+                        <span className="text-sm text-slate-600">
+                          {copied ? 'Link copied!' : 'Copy link'}
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
 
           {/* Article Header */}
           <header className="mb-12">
@@ -54,11 +147,11 @@ export default function BlogArticle() {
                 {article.category}
               </span>
             </div>
-            
+
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-slate-800 mb-6 leading-tight" data-testid="article-title">
               {article.title}
             </h1>
-            
+
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
               <div className="flex items-center space-x-6 text-sm text-slate-600">
                 <div className="flex items-center">
@@ -74,47 +167,10 @@ export default function BlogArticle() {
                   {article.readTime}
                 </div>
               </div>
-              
-              {/* Share Buttons */}
-              <div className="flex items-center space-x-2 md:space-x-3">
-                <span className="text-xs md:text-sm text-slate-600 mr-1 md:mr-2">Share:</span>
-                <button 
-                  onClick={() => {
-                    const url = encodeURIComponent(window.location.href);
-                    const text = encodeURIComponent(article.title);
-                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
-                  }}
-                  className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" 
-                  data-testid="button-share-facebook"
-                >
-                  <Facebook className="w-4 h-4" />
-                </button>
-                <button 
-                  onClick={() => {
-                    const url = encodeURIComponent(window.location.href);
-                    const text = encodeURIComponent(`${article.title} - ${article.excerpt}`);
-                    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
-                  }}
-                  className="p-2 bg-sky-500 text-white rounded-full hover:bg-sky-600 transition-colors" 
-                  data-testid="button-share-twitter"
-                >
-                  <Twitter className="w-4 h-4" />
-                </button>
-                <button 
-                  onClick={() => {
-                    const url = encodeURIComponent(window.location.href);
-                    const title = encodeURIComponent(article.title);
-                    const summary = encodeURIComponent(article.excerpt);
-                    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`, '_blank', 'width=600,height=400');
-                  }}
-                  className="p-2 bg-blue-700 text-white rounded-full hover:bg-blue-800 transition-colors" 
-                  data-testid="button-share-linkedin"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </button>
-              </div>
+
+              {/* Share Buttons - No longer needed here as they are in the header */}
             </div>
-            
+
             <p className="text-xl text-slate-600 leading-relaxed">
               {article.excerpt}
             </p>
