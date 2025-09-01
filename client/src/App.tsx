@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import Privacy from "@/pages/privacy";
+import PrivacyPolicy from "@/pages/privacy-policy";
 import Terms from "@/pages/terms";
 import AboutTechnique from "@/pages/about-technique";
 import Benefits from "@/pages/benefits";
@@ -56,6 +57,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/Privacy-Policy" component={Privacy} />
       <Route path="/terms-and-conditions" component={Terms} />
       <Route path="/about-technique" component={AboutTechnique} />

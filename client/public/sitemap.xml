@@ -1,123 +1,64 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zonely.space/</loc>
-    <lastmod>2025-01-02T10:45:00+00:00</lastmod>
+    <loc>https://www.zonely.space/</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zonely.space/about</loc>
-    <lastmod>2025-01-02T10:45:00+00:00</lastmod>
+    <loc>https://www.zonely.space/about</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zonely.space/contact</loc>
-    <lastmod>2025-01-02T10:45:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/Privacy-Policy</loc>
-    <lastmod>2025-01-02T10:45:00+00:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/terms-and-conditions</loc>
-    <lastmod>2025-01-02T10:45:00+00:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/about-technique</loc>
-    <lastmod>2025-01-31T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/benefits</loc>
-    <lastmod>2025-01-31T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/practice-guide</loc>
-    <lastmod>2025-01-31T12:00:00+00:00</lastmod>
+    <loc>https://www.zonely.space/about-technique</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zonely.space/blog</loc>
-    <lastmod>2025-01-31T12:00:00+00:00</lastmod>
+    <loc>https://www.zonely.space/benefits</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.zonely.space/practice-guide</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.zonely.space/blog</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://zonely.space/blog/science-of-stress-breathing-breaks</loc>
-    <lastmod>2025-01-15T12:00:00+00:00</lastmod>
+    <loc>https://www.zonely.space/blog/science-of-stress-breathing-breaks</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://zonely.space/blog/workplace-wellness-mindful-moments</loc>
-    <lastmod>2025-01-12T12:00:00+00:00</lastmod>
+    <loc>https://www.zonely.space/contact</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://zonely.space/blog/sleep-better-breathing-techniques</loc>
-    <lastmod>2025-01-10T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/blog/teaching-kids-breathe-family-mindfulness</loc>
-    <lastmod>2025-01-08T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/blog/athletic-edge-breathing-enhances-performance</loc>
-    <lastmod>2025-01-05T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/blog/digital-detox-mindful-breathing-screen-stress</loc>
-    <lastmod>2025-01-03T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/blog/seasonal-stress-management-breathing-transitions</loc>
-    <lastmod>2024-12-30T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/blog/neuroscience-calm-breathing-rewires-brain</loc>
-    <lastmod>2024-12-28T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/blog/breathing-through-anxiety-panic-relief</loc>
-    <lastmod>2024-12-25T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/blog/creating-sacred-space-mindfulness-ritual</loc>
-    <lastmod>2024-12-22T12:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://zonely.space/disclaimer</loc>
-    <lastmod>2025-01-31T12:00:00+00:00</lastmod>
+    <loc>https://www.zonely.space/privacy-policy</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.zonely.space/terms-and-conditions</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
